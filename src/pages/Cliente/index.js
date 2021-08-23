@@ -1,12 +1,9 @@
-import { Table } from 'rsuite';
+
 import 'rsuite/dist/styles/rsuite-default.css';
-import { FiEdit2, FiUserPlus, FiTrash2 } from "react-icons/fi";
-import EditIcon from '@rsuite/icons/Edit';
-import TrashIcon from '@rsuite/icons/Trash';
+import { FiUserPlus } from "react-icons/fi";
 
+import Table from './../../components/Table';
 
-
-const { Column, HeaderCell, Cell } = Table;
 const fakeData = [
   {
     "id": 1,
@@ -388,52 +385,12 @@ const Cliente = () => {
           </div>
 
           <Table
-            height={600}
             data={fakeData}
-            onRowClick={data => {
-              console.log(data);
-            }}
-          >
-            <Column width={70} align="center" fixed>
-              <HeaderCell>Id</HeaderCell>
-              <Cell dataKey="id" />
-            </Column>
+            config={[
+              { label: 'Nome', key: 'firstName', width: 300, fixed: false, align: "left" },
+              { label: 'E-Mail', key: 'email', width: 200, fixed: true, align: "right" },
 
-            <Column width={300} fixed>
-              <HeaderCell>First Name</HeaderCell>
-              <Cell dataKey="firstName" />
-            </Column>
-
-            <Column width={300}>
-              <HeaderCell>Last Name</HeaderCell>
-              <Cell dataKey="lastName" />
-            </Column>
-
-            <Column width={350}>
-              <HeaderCell>Email</HeaderCell>
-              <Cell dataKey="email" />
-            </Column>
-            <Column width={120} fixed="right">
-              <HeaderCell>Action</HeaderCell>
-
-              <Cell>
-                {rowData => {
-                  function handleAction() {
-                    alert(`firstName:${rowData.firstName}`);
-                  }
-                  return (
-                    <span>
-                      <a onClick={handleAction}>
-                        <EditIcon style={{ fontSize: '1.5em', color: '#C77129' }} />
-                      </a> |{' '}
-                      <a onClick={handleAction}>
-                        <TrashIcon style={{ fontSize: '1.5em', color: 'red' }} /> </a>
-                    </span>
-                  );
-                }}
-              </Cell>
-            </Column>
-          </Table>
+            ]} />
 
 
         </div>
