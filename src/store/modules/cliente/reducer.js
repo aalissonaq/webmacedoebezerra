@@ -1,10 +1,19 @@
+import produce from 'immer';
+import types from './types';
+
 const INITIAL_STATE = {
-  cliente: [],
+  clientes: [],
 };
 
 function cliente(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case '@cliente/All': { }
+    case types.UPDATE_CLIENTES: {
+      console.log(action)
+      return produce(state, (draft) => {
+        draft = { ...draft, ...action.payload };
+        return draft;
+      });
+    }
     default:
       return state;
   }
