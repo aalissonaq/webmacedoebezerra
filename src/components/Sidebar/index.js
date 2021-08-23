@@ -1,6 +1,6 @@
 import { Link, withRouter } from 'react-router-dom';
 import { FiUsers, FiHome } from "react-icons/fi";
-import logoCI from '../../assets/CI.png';
+//import logoCI from '../../assets/CI.png';
 
 const Sidebar = ({ location }) => {
   return (

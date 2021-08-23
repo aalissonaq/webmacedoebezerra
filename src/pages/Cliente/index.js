@@ -387,7 +387,7 @@ const Cliente = () => {
           <Table
             data={fakeData}
             config={[
-              { label: 'Nome', key: 'firstName', width: 300, fixed: false, align: "left" },
+              { label: 'Nome', key: 'firstName', width: 300, fixed: true, align: "left" },
               { label: 'E-Mail', key: 'email', width: 200, fixed: true, align: "right" },
 
             ]} />
