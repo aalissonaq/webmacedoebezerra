@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import clientes from './modules/cliente/reducer';
+import clientes from './cliente/reducer';
 
 export default combineReducers({
   clientes

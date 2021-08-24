@@ -6,9 +6,8 @@ import api from './../../../services/api';
 export function* allClientes() {
   try {
     const { data: res } = yield call(api.get, '/cliente');
-
     if (res.err) {
-      alert('Error: ' + res.err);
+      alert(res.err);
       return false;
     }
     yield put(updateClientes({ clientes: res.clientes }));

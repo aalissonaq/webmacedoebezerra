@@ -10,8 +10,8 @@ const Sidebar = ({ location }) => {
         <ul className="p-0 m-0">
           <li className="" >
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
-              <FiHome size="1.5em" style={{ marginRight: '14px' }} />
-              <text>Dashdash</text>
+              <FiHome style={{ marginRight: '14px', fontSize: '24px' }} />
+              <text>Dashboard</text>
             </Link>
           </li>
           <li className="" >

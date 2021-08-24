@@ -1,14 +1,14 @@
 import produce from 'immer';
 import types from './types';
 
+
 const INITIAL_STATE = {
   clientes: [],
 };
 
-function cliente(state = INITIAL_STATE, action) {
+function clientes(state = INITIAL_STATE, action) {
   switch (action.type) {
     case types.UPDATE_CLIENTES: {
-      console.log(action)
       return produce(state, (draft) => {
         draft = { ...draft, ...action.payload };
         return draft;
@@ -19,4 +19,4 @@ function cliente(state = INITIAL_STATE, action) {
   }
 }
 
-export default cliente;
+export default clientes;

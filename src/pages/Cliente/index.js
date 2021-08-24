@@ -37,6 +37,8 @@ const Cliente = () => {
             data={clientes}
             config={[
               { label: 'NOME', key: 'nome', fixed: true, align: "left" },
+              { label: 'TELEFONE', key: 'telefone', align: "left" },
+              { label: 'E-MAIL', key: 'email', align: "left" },
             ]}
             actions={(cliente) => (
               <Button color="blue" size="xs">

@@ -8,7 +8,7 @@ const Home = () => {
         <div className="col-12">
 
           <div className="w-100 d-flex justify-content-between">
-            <h2 className="titlePages">Dashdash</h2>
+            <h2 className="titlePages">Dashboard</h2>
 
           </div>
 
