@@ -4,6 +4,7 @@ import { FiUsers, FiHome } from "react-icons/fi";
 
 const Sidebar = ({ location }) => {
   return (
+
     <sidebar id="sidebar" className="col-sm-4 col-md-2 h-100 ">
       <div className=" py-3">
 

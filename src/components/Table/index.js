@@ -6,13 +6,13 @@ import { Table } from 'rsuite';
 
 const { Column, HeaderCell, Cell, } = Table;
 
-const TableComponent = ({ data, config, actions, onRowClick }) => {
+const TableComponent = ({ data, config, actions, content, onRowClick }) => {
   return (
     <Table
       onRowClick={onRowClick}
-      height={550}
+      height={450}
       data={data}
-    //wordWrap
+      wordWrap
     >
       {config.map((c) => (
         <Column
@@ -20,23 +20,31 @@ const TableComponent = ({ data, config, actions, onRowClick }) => {
           width={c.width}
           fixed={c.fixed}
           align={c.align}
+          verticalAlign='middle'
 
         >
           <HeaderCell>{c.label}</HeaderCell>
-          <Cell dataKey={c.key} />
+          {
+            !c.content
+              ? (<Cell dataKey={c.key} />)
+              : (<Cell >{(item) => c.content(item)}</Cell>)
+          }
+
         </Column>
-      ))}
+      ))
+      }
 
       <Column
-        width={150}
+        width={100}
         fixed="right"
+        align="center"
       >
         <HeaderCell>Ações</HeaderCell>
         <Cell>
           {(item) => actions(item)}
         </Cell>
       </Column>
-    </Table>
+    </Table >
   );
 
 }

@@ -5,8 +5,12 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import './styles.css';
 
+import { Animation } from 'rsuite';
+
 import Cliente from './pages/Cliente';
 import Home from './pages/Home';
+
+const { Collapse } = Animation;
 
 const Routes = () => {
   return (

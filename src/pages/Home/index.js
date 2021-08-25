@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import api from './../../services/api'
 //import { FiUsers } from "react-icons/fi";
 
 const Home = () => {
+
+  useEffect(() => {
+    api.get('/');
+  }, []);
+
   return (
     <div className="col p-4 overflow-auto h-100">
       <div className="row">

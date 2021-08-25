@@ -109,7 +109,12 @@ sidebar ul li text {
 
 .titlePages {
   font-family: 'Advent Pro', sans-serif;
+  line-height: 42, 9px;
+  color: var(--secundary);
+}
 
+.titleDrower {
+  font-family: 'Advent Pro', sans-serif;
   line-height: 42, 9px;
   color: var(--secundary);
 }
