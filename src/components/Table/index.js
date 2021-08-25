@@ -10,7 +10,7 @@ const TableComponent = ({ data, config, actions, content, onRowClick }) => {
   return (
     <Table
       onRowClick={onRowClick}
-      height={450}
+      height={460}
       data={data}
       wordWrap
     >

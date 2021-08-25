@@ -47,7 +47,7 @@ const Cliente = () => {
           </Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
-          <hr />
+
           <text>Formulário do Cliente</text>
         </Drawer.Body>
         <Drawer.Footer>
