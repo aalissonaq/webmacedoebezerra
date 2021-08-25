@@ -3,7 +3,7 @@ import { FiBell, FiPower } from "react-icons/fi";
 
 const Header = () => {
   return (
-    <header className="container-fluid d-flex justify-content-between ">
+    <header className="container-fluid d-flex justify-content-between shadow " >
       <div className="d-flex align-items-center">
 
         <img src={logo} className="img-fluid" alt="logo_Madedo&Bezerra" />
